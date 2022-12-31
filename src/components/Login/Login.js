@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { BASE_API_URL } from "../../constants/Paths";
 import axios from "axios";
-import { fontFamily, fontStyle, fontWeight, lineHeight } from "@mui/system";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -32,6 +32,8 @@ const Login = () => {
     // flexGrow: 0,
   };
 
+  const navigate = useNavigate();
+
   const handleChangeUsername = (event) => {
     setUsername(event.target.value);
   };
@@ -49,6 +51,7 @@ const Login = () => {
         setIsError(false);
         setErrorMessage("");
         localStorage.setItem("token", response.data.token);
+        navigate("/home");
       })
       .catch(function (error) {
         setIsLoading(false);
