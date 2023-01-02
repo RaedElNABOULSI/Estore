@@ -169,7 +169,7 @@ const Home = () => {
                     display: "flex",
                     flexDirection: "row",
                     gap: "1px",
-                    marginLeft: "80px",
+                    marginLeft: "40px",
                   }}
                 >
                   <p
