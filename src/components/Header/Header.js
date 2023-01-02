@@ -15,6 +15,10 @@ const Header = () => {
     loadCategories();
   }, []);
 
+  const selectCategory = (category) => {
+    navigate(`/products/category/${category}`);
+  };
+
   const loadCategories = () => {
     axios
       .get(`${BASE_API_URL}/products/categories`)
@@ -128,6 +132,7 @@ const Header = () => {
                     style={{
                       color: "white",
                     }}
+                    onClick={() => selectCategory(category)}
                     // aria-haspopup="true"
                   >
                     {category}
