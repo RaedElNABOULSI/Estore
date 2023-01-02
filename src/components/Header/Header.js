@@ -6,7 +6,9 @@ import { CircularProgress, Pagination } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const [isLoading, setIsLoading] = useState(true);
   const [categoryList, setCategoryList] = useState([]);
 
   useEffect(() => {
@@ -14,7 +16,6 @@ const Header = () => {
   }, []);
 
   const loadCategories = () => {
-    setIsLoading(true);
     axios
       .get(`${BASE_API_URL}/products/categories`)
       .then(function (response) {
@@ -46,6 +47,7 @@ const Header = () => {
             width={"111.58px"}
             height="24px"
             src="/home-logo.png"
+            onClick={() => navigate(`/home`)}
           ></img>
         </div>
         <div
@@ -110,6 +112,7 @@ const Header = () => {
             categoryList.map((category) => {
               return (
                 <div
+                  key={category.id}
                   style={{
                     display: "inline-block",
                     position: "relative",
@@ -120,6 +123,7 @@ const Header = () => {
                   }}
                 >
                   <Button
+                    key={category.id}
                     // id="basic-button"
                     style={{
                       color: "white",

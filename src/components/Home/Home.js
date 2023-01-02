@@ -9,8 +9,6 @@ import { useNavigate } from "react-router-dom";
 import Header from "../Header";
 
 const Home = () => {
-  const navigate = useNavigate();
-
   const [isLoading, setIsLoading] = useState(false);
   const [productList, setProductList] = useState([]);
   const [productsLimit, setProductsLimit] = useState(10);
@@ -33,8 +31,11 @@ const Home = () => {
       });
   };
 
-  const selectProduct = (productId) => {
-    navigate(`/product/${productId}`);
+  const navigate = useNavigate();
+  const selectProduct = (productId, navigation = false) => {
+    if (navigation) {
+      navigate(`/product/${productId}`);
+    }
   };
 
   return (
@@ -53,15 +54,10 @@ const Home = () => {
         ) : (
           productList.map((product) => {
             return (
-              <div className="col-3 mt-5 mr-2">
-                {/* <Avatar
-                  width={"228px"}
-                  height="330px"
-                  alt="Remy Sharp"
-                  src={product.image}
-                /> */}
+              <div key={product.id} className="col-3 mt-5 mr-2">
                 <img
-                  onClick={() => selectProduct(product.id)}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => selectProduct(product.id, true)}
                   width={"228px"}
                   height="330px"
                   src={product.image}
