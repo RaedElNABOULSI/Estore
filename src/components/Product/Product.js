@@ -31,7 +31,7 @@ const Product = () => {
   return (
     <div
       style={{
-        backgroundColor: "#29363F",
+        // backgroundColor: "#29363F",
         height: "100%",
         width: "100%",
         // position: "fixed",

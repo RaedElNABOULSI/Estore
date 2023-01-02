@@ -15,7 +15,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        backgroundColor: "#29363F",
+        backgroundSize: "contain",
+        margin: "0",
+      }}
+    >
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
