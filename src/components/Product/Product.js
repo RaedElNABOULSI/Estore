@@ -73,7 +73,7 @@ const Product = () => {
             <div>
               {" "}
               <img
-                style={{ marginRight: "100px" }}
+                style={{ marginRight: "100px", marginBottom: "20px" }}
                 className="mt-5"
                 width={"459px"}
                 height="51px"
