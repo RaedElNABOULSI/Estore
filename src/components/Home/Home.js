@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import axios from "axios";
 import { BASE_API_URL } from "../../constants/Paths";
-import { Avatar, CircularProgress, Pagination } from "@mui/material";
+import { CircularProgress, Pagination } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Header from "../Header";
 

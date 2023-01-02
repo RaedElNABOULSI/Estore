@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import axios from "axios";
 import { BASE_API_URL } from "../../constants/Paths";
-import { CircularProgress, Pagination } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
