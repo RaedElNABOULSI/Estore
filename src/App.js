@@ -21,7 +21,10 @@ function App() {
       style={{
         backgroundColor: "#29363F",
         backgroundSize: "contain",
-        margin: "0",
+        position: "absolute",
+        top: "0px",
+        right: "0px",
+        left: "0px",
       }}
     >
       <Routes>
