@@ -45,7 +45,7 @@ const Header = () => {
             style={{ cursor: "pointer" }}
             width={"111.58px"}
             height="24px"
-            src="home-logo.png"
+            src="/home-logo.png"
           ></img>
         </div>
         <div
@@ -59,7 +59,7 @@ const Header = () => {
           <img
             width={"488.86px"}
             height="52px"
-            src="search-bar.png"
+            src="/search-bar.png"
             alt="search-bar"
           ></img>
         </div>
@@ -71,7 +71,7 @@ const Header = () => {
           }}
           className="col-2"
         >
-          <img width={"22px"} height="22px" src="User.png"></img>
+          <img width={"22px"} height="22px" src="/User.png"></img>
         </div>
         <div
           style={{
@@ -81,7 +81,7 @@ const Header = () => {
           }}
           className="col-2"
         >
-          <img width={"28px"} height="24px" src="cart.png"></img>
+          <img width={"28px"} height="24px" src="/cart.png"></img>
         </div>
       </div>
       <div className="row">
@@ -93,7 +93,7 @@ const Header = () => {
             position: "absolute",
           }}
         >
-          <img width={"141px"} height="31px" src="category.png"></img>
+          <img width={"141px"} height="31px" src="/category.png"></img>
         </div>
         <div
           className="col-9"
