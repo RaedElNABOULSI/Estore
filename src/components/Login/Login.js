@@ -24,12 +24,6 @@ const Login = () => {
     textTransform: "uppercase",
 
     color: "#FFFFFF",
-
-    /* Inside auto layout */
-
-    // flex: "none",
-    // order: 1,
-    // flexGrow: 0,
   };
 
   const navigate = useNavigate();
@@ -87,7 +81,6 @@ const Login = () => {
               value={username}
               onChange={handleChangeUsername}
               className="mx-auto w-50"
-              //   type="email"
               required
             />
           </div>

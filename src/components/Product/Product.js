@@ -16,7 +16,6 @@ const Product = () => {
   }, []);
 
   const loadProduct = (productId) => {
-    // setIsLoading(true);
     axios
       .get(`${BASE_API_URL}/products/${productId}`)
       .then(function (response) {
@@ -31,10 +30,8 @@ const Product = () => {
   return (
     <div
       style={{
-        // backgroundColor: "#29363F",
         height: "100%",
         width: "100%",
-        // position: "fixed",
       }}
     >
       <Header />

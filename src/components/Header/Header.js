@@ -34,10 +34,8 @@ const Header = () => {
   return (
     <div
       style={{
-        // backgroundColor: "#29363F",
         height: "100%",
         width: "100%",
-        // position: "fixed",
       }}
     >
       <div className="row">
@@ -57,8 +55,6 @@ const Header = () => {
         <div
           style={{
             marginTop: "30px",
-            // marginLeft: "476.58px",
-            // position: "fixed",
           }}
           className="col-4"
         >
@@ -104,7 +100,6 @@ const Header = () => {
         <div
           className="col-9"
           style={{
-            // position: "fixed",
             marginTop: "40px",
             marginLeft: "40px",
             marginRight: "50px",
@@ -120,20 +115,16 @@ const Header = () => {
                   style={{
                     display: "inline-block",
                     position: "relative",
-                    // padding: "15px 32px",
                     textAlign: "center",
                     left: "200px",
-                    // position: "absolute",
                   }}
                 >
                   <Button
                     key={category.id}
-                    // id="basic-button"
                     style={{
                       color: "white",
                     }}
                     onClick={() => selectCategory(category)}
-                    // aria-haspopup="true"
                   >
                     {category}
                   </Button>

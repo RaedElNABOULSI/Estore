@@ -1,7 +1,7 @@
 import "./App.css";
 import Login from "./components/Login";
 import Home from "./components/Home";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Product from "./components/Product";
 import CategorizedProducts from "./components/CategorizedProducts/CategorizedProducts";
