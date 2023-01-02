@@ -5,6 +5,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Product from "./components/Product";
 import CategorizedProducts from "./components/CategorizedProducts/CategorizedProducts";
+import NotFound from "./components/404";
 
 function App() {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ function App() {
           path="/products/category/:category"
           element={<CategorizedProducts />}
         />
-        {/* <Route path="*" element={<Navigate to={"/404"} />} /> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
