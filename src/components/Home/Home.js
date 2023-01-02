@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_API_URL } from "../../constants/Paths";
-import { CircularProgress, Pagination } from "@mui/material";
+import { CircularProgress, Pagination, Rating } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Header from "../Header";
 
@@ -59,24 +59,40 @@ const Home = () => {
                   height="330px"
                   src={product.image}
                 ></img>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: "1px",
-                    marginLeft: "40px",
-                  }}
-                >
-                  <p
+                <div className="d-flex flex-column">
+                  <div style={{ marginRight: "300px" }}>
+                    <p
+                      className="p-2"
+                      style={{
+                        color: "white",
+                        position: "relative",
+                        left: "80px",
+                      }}
+                    >
+                      {product.title}
+                    </p>
+                  </div>
+                  <div
                     style={{
-                      color: "white",
-                      marginTop: "20px",
-                      width: "225px",
+                      position: "relative",
+                      bottom: "100px",
+                      left: "80px",
                     }}
+                    className="p-2"
                   >
-                    {product.title}
-                  </p>
-                  <p style={{ color: "white", marginTop: "20px" }}>Rating</p>
+                    <p
+                      style={{
+                        color: "white",
+                      }}
+                    >
+                      ${product.price}
+                    </p>
+                    <Rating
+                      style={{ marginRight: "50px", marginTop: "20px" }}
+                      name="simple-controlled"
+                      value={product.rating.rate}
+                    />
+                  </div>
                 </div>
               </div>
             );
