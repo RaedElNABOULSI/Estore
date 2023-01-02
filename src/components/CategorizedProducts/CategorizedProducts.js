@@ -82,24 +82,40 @@ const CategorizedProducts = () => {
                   height="330px"
                   src={product.image}
                 ></img>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: "1px",
-                    marginLeft: "40px",
-                  }}
-                >
-                  <p
+                <div className="d-flex flex-column">
+                  <div style={{ marginRight: "300px" }}>
+                    <p
+                      className="p-2"
+                      style={{
+                        color: "white",
+                        position: "relative",
+                        left: "80px",
+                      }}
+                    >
+                      {product.title}
+                    </p>
+                  </div>
+                  <div
                     style={{
-                      color: "white",
-                      marginTop: "20px",
-                      width: "225px",
+                      position: "relative",
+                      bottom: "80px",
+                      left: "80px",
                     }}
+                    className="p-2"
                   >
-                    {product.title}
-                  </p>
-                  <p style={{ color: "white", marginTop: "20px" }}>Rating</p>
+                    <p
+                      style={{
+                        color: "white",
+                      }}
+                    >
+                      ${product.price}
+                    </p>
+                    <Rating
+                      style={{ marginRight: "50px" }}
+                      name="simple-controlled"
+                      value={product.rating.rate}
+                    />
+                  </div>
                 </div>
               </div>
             );
